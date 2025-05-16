@@ -26,31 +26,39 @@
     <!-- Animate CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- GSAP -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script> -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-odd overflow-x-hidden font-poppins">
-    <nav class="animate__animated animate__fadeInDown">
-      <div class="sticky top-5 h-24 max-w-screen bg-white mt-5">
-        <ul class="flex h-full justify-between items-center">
-          <div class="w-1/3"></div>
-          <ul class="flex gap-4 justify-center items-center w-1/3">
-            <a href="#home"><li>HOME</li></a>
-            <li>/</li>
-            <a href="#projects"><li>PROJECTS</li></a>
-            <li>/</li>
-            <a href="#skills"><li>SKILLS</li></a>
-          </ul>
-          <div class="flex w-1/3 justify-end">
-            <a href="#contact"><button class="border border-blue-500 justify-end mr-5">HIRE ME</button></a>
-          </div>
+    <nav class="animate__animated animate__fadeInDown sticky top-5 h-24 z-50 bg-white mt-5">
+      <div class="flex h-full justify-between items-center max-w-screen mx-auto w-full px-6">
+        <div class="hidden lg:flex lg:w-1/3"></div>
+
+        <!-- center -->
+        <ul class="flex gap-4 justify-center items-center w-full lg:w-1/3">
+          <li class="font-medium"><a href="#home">HOME</a></li>
+          <li>/</li>
+          <li class="font-medium"><a href="#projects">PROJECTS</a></li>
+          <li>/</li>
+          <li class="font-medium"><a href="#experience">EXPERIENCE</a></li>
         </ul>
+
+        <!-- right contact me -->
+        <div class="hidden lg:flex lg:w-1/3 justify-end">
+          <a href="#contactme">
+            <button
+              class="rounded-xl border shadow-lg p-2 bg-slate-700 text-white font-medium hover:bg-white hover:text-slate-900 hover:scale-105 transition duration-500"
+            >
+              Contact Me
+            </button>
+          </a>
+        </div>
       </div>
     </nav>
 
     <section id="home" class="flex justify-center items-center relative h-screen bg-odd">
       <!-- foto profile -->
-      <img class="absolute h-[100%] -top-5 w-auto" src="assets/img/jas-removed-cropped-rapi.png" alt="toingg-profile" />
+      <!-- <img class="absolute h-[100%] -top-5 w-auto" src="assets/img/jas-removed-cropped-rapi.png" alt="toingg-profile" />
 
       <div class="flex w-full px-16 items-center justify-between">
         <div class="flex flex-col font-bebas text-black text-8xl leading-none">
@@ -60,16 +68,31 @@
         <div class="text-black text-4xl max-w-[30%] text-right">
           <h2>Software Developer</h2>
         </div>
+      </div> -->
+      <div class="absolute top-0 left-0 flex flex-col pt-[15vh] pl-5 w-full max-w-[60%] z-10">
+        <div class="font-bebas text-black text-[10vh] lg:text-[20vh] leading-none">
+          <h1>Fachrizal</h1>
+          <h1>Ardiansyah</h1>
+        </div>
+        <div class="text-black text-2xl lg:text-4xl italic lg:mt-5 text-nowrap">
+          <h2>Software Engineer</h2>
+        </div>
       </div>
+      <!-- img profile -->
+      <img
+        class="absolute right-0 bottom-0 lg:-top-5 max-h-[90%] lg:max-h-[100%] w-auto object-contain z-51"
+        src="assets/img/cafe-removed.PNG"
+        alt="toingg-profile"
+      />
     </section>
 
-    <section id="projects" class="h-screen relative -top-5 flex flex-col justify-center bg-even text-white">
-      <div class="flex h-full">
-        <div class="w-2/4 flex items-center justify-start pl-20">
-          <h1 class="font-bebas text-[20vh] italic">Projects</h1>
+    <section id="projects" class="lg:h-screen relative -top-5 flex flex-col justify-center bg-even text-white">
+      <div class="flex flex-col lg:flex-row h-full">
+        <div class="w-full lg:w-2/4 flex items-center justify-center lg:justify-start lg:pl-20 pt-10">
+          <h1 class="font-bebas text-8xl lg:text-[20vh] italic">Projects</h1>
         </div>
-        <div class="w-2/4 flex justify-end">
-          <div class="grid grid-cols-2 gap-5 mx-10 my-30 items-center">
+        <div class="w-full lg:w-2/4 flex justify-end">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mx-10 my-5 lg:my-30">
             <!-- PROJECT CARDS -->
             <div class="group h-full rounded-xl overflow-hidden shadow-lg bg-odd transition hover:bg-gray-500">
               <!-- background img -->
@@ -79,12 +102,11 @@
               <div class="flex flex-col justify-between h-full p-4 transition">
                 <h2 class="text-black text-xl font-bold transition group-hover:text-white">Factha</h2>
                 <h3 class="text-gray-700 text-l font-bold leading-none italic transition group-hover:text-gray-300">
-                  Solution Ahead for Maintaining Information Integrity and Filtering of Hoax
+                  Bangkit Project
                 </h3>
-                <h3 class="text-red-500 font-bold italic group-hover:text-red-200">Bangkit Project</h3>
 
                 <div class="flex-1 flex items-center justify-center">
-                  <img src="assets/img/projects/factha.png" alt="Illustration" class="w-[100%] h-auto" />
+                  <img src="assets/img/projects/factha.png" alt="factha-project" class="w-[100%] h-auto" />
                 </div>
                 <!-- footer card -->
                 <div class="flex justify-between items-center">
@@ -108,21 +130,25 @@
                 </div>
               </div>
             </div>
+
             <!-- PROJECT CARDS -->
-            <div class="grou h-full rounded-xl overflow-hidden shadow-lg bg-odd transition hover:bg-gray-500">
+            <div class="group h-full rounded-xl overflow-hidden shadow-lg bg-odd transition hover:bg-gray-500">
               <!-- background img -->
               <!-- <img src="assets/img/projects/factha.png" alt="Project Background" class="absolute w-full h-auto object-cover" /> -->
 
               <!-- content -->
               <div class="flex flex-col justify-between h-full p-4 transition">
-                <h2 class="text-black text-xl font-bold transition group-hover:text-white">Portfolio</h2>
+                <h2 class="text-black text-xl font-bold transition group-hover:text-white">Portfolio V1</h2>
                 <h3 class="text-gray-700 text-l font-bold leading-none italic transition group-hover:text-gray-300">
-                  Solution Ahead for Maintaining Information Integrity and Filtering of Hoax
+                  Fachrizal Ardiansyah Portfolio
                 </h3>
-                <h3>Bangkit Project</h3>
 
                 <div class="flex-1 flex items-center justify-center">
-                  <img src="assets/img/projects/factha.png" alt="Illustration" class="w-[100%] h-auto" />
+                  <img
+                    src="assets/img/projects/portfolio-project.png"
+                    alt="portfolio-project"
+                    class="w-[100%] h-auto object-cover"
+                  />
                 </div>
                 <!-- footer card -->
                 <div class="flex justify-between items-center">
@@ -153,22 +179,21 @@
 
               <!-- content -->
               <div class="flex flex-col justify-between h-full p-4 transition">
-                <h2 class="text-black text-xl font-bold transition group-hover:text-white">Factha</h2>
+                <h2 class="text-black text-xl font-bold transition group-hover:text-white">None</h2>
                 <h3 class="text-gray-700 text-l font-bold leading-none italic transition group-hover:text-gray-300">
-                  Solution Ahead for Maintaining Information Integrity and Filtering of Hoax
+                  None
                 </h3>
-                <h3>Bangkit Project</h3>
 
                 <div class="flex-1 flex items-center justify-center">
-                  <img src="assets/img/projects/factha.png" alt="Illustration" class="w-[100%] h-auto" />
+                  <img src="assets/img/projects/portfolio-project.png" alt="none" class="w-[100%] h-auto" />
                 </div>
                 <!-- footer card -->
                 <div class="flex justify-between items-center">
                   <!-- tech -->
                   <div class="flex gap-2">
-                    <span class="px-3 py-1 bg-gray-700 rounded-full text-sm font-semibold">GCP</span>
-                    <span class="px-3 py-1 bg-gray-700 rounded-full text-sm font-semibold">Hapi.js</span>
-                    <span class="px-3 py-1 bg-gray-700 rounded-full text-sm font-semibold">MySQL</span>
+                    <span class="px-3 py-1 bg-gray-700 rounded-full text-sm font-semibold">Express</span>
+                    <span class="px-3 py-1 bg-gray-700 rounded-full text-sm font-semibold">Docker</span>
+                    <span class="px-3 py-1 bg-gray-700 rounded-full text-sm font-semibold">PostgreSQL</span>
                   </div>
                   <!-- arrow -->
                   <svg
@@ -185,28 +210,26 @@
               </div>
             </div>
             <!-- PROJECT CARDS -->
-            <div class="grou h-full rounded-xl overflow-hidden shadow-lg bg-odd transition hover:bg-gray-500">
+            <div class="group h-full rounded-xl overflow-hidden shadow-lg bg-odd transition hover:bg-gray-500">
               <!-- background img -->
               <!-- <img src="assets/img/projects/factha.png" alt="Project Background" class="absolute w-full h-auto object-cover" /> -->
 
               <!-- content -->
               <div class="flex flex-col justify-between h-full p-4 transition">
-                <h2 class="text-black text-xl font-bold transition group-hover:text-white">Factha</h2>
+                <h2 class="text-black text-xl font-bold transition group-hover:text-white">OneMart</h2>
                 <h3 class="text-gray-700 text-l font-bold leading-none italic transition group-hover:text-gray-300">
-                  Solution Ahead for Maintaining Information Integrity and Filtering of Hoax
+                  Campus Project
                 </h3>
-                <h3>Bangkit Project</h3>
-
                 <div class="flex-1 flex items-center justify-center">
-                  <img src="assets/img/projects/factha.png" alt="Illustration" class="w-[100%] h-auto" />
+                  <img src="assets/img/projects/portfolio-project.png" alt="none" class="w-[100%] h-auto" />
                 </div>
                 <!-- footer card -->
                 <div class="flex justify-between items-center">
                   <!-- tech -->
                   <div class="flex gap-2">
-                    <span class="px-3 py-1 bg-gray-700 rounded-full text-sm font-semibold">GCP</span>
-                    <span class="px-3 py-1 bg-gray-700 rounded-full text-sm font-semibold">Hapi.js</span>
-                    <span class="px-3 py-1 bg-gray-700 rounded-full text-sm font-semibold">MySQL</span>
+                    <span class="px-3 py-1 bg-gray-700 rounded-full text-sm font-semibold">Flutter</span>
+                    <!-- <span class="px-3 py-1 bg-gray-700 rounded-full text-sm font-semibold">Hapi.js</span>
+                    <span class="px-3 py-1 bg-gray-700 rounded-full text-sm font-semibold">MySQL</span> -->
                   </div>
                   <!-- arrow -->
                   <svg
@@ -227,13 +250,16 @@
       </div>
     </section>
 
-    <section id="experience" class="flex flex-row items-center h-screen py-10 bg-odd">
+    <section id="experience" class="flex flex-col lg:flex-row items-center lg:h-screen py-10 bg-odd">
       <div class="experience-container flex flex-col w-2/4 h-full justify-center items-center gap-5">
+        <div class="visible lg:hidden w-2/4 flex font-bebas justify-center text-8xl italic">
+          <h1 class="font-bebas text-7xl italic">Experience</h1>
+        </div>
         <!-- expr. card -->
-        <div class="border rounded-xl min-w-2xl max-w-2xl p-6 shadow-md bg-gray-100">
-          <h1 class="text-xl font-semibold">Play Product</h1>
-          <h2 class="text-lg text-gray-600">Operator LED</h2>
-          <ul class="list-disc list-inside text-gray-700 mt-4 space-y-1">
+        <div class="border rounded-xl w-full max-w-xl lg:min-w-2xl p-6 shadow-md bg-gray-100">
+          <h1 class="text-xl font-semibold">Play Production</h1>
+          <h2 class="text-lg text-gray-600">Operator</h2>
+          <ul class="list-disc list-inside text-gray-700 mt-4">
             <li>Setting</li>
             <li>Setting</li>
             <li>Setting</li>
@@ -241,10 +267,10 @@
         </div>
 
         <!-- expr. card -->
-        <div class="border rounded-xl min-w-2xl max-w-2xl p-6 shadow-md bg-gray-100">
+        <div class="border rounded-xl w-full max-w-xl lg:min-w-2xl p-6 shadow-md bg-gray-100">
           <h1 class="text-xl font-semibold">Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka</h1>
           <h2 class="text-lg font-medium">Cloud Computing Cohort</h2>
-          <ul class="list-disc list-inside text-gray-700 mt-4 space-y-1">
+          <ul class="list-disc list-inside text-gray-700 mt-4">
             <li>API Development using Node.js with Hapi</li>
             <li>Cloud Computing with Google Cloud Platform</li>
             <li>
@@ -255,30 +281,94 @@
         </div>
 
         <!-- expr. card -->
-        <div class="border rounded-xl min-w-2xl max-w-2xl p-6 shadow-md bg-gray-100">
+        <div class="border rounded-xl w-full max-w-xl lg:min-w-2xl p-6 shadow-md bg-gray-100">
           <h1 class="text-xl font-semibold">Shopee Express</h1>
           <h2 class="text-lg text-gray-600">Warehouse Worker</h2>
-          <ul class="list-disc list-inside text-gray-700 mt-4 space-y-1">
+          <ul class="list-disc list-inside text-gray-700 mt-4">
             <li>Bagging</li>
             <li>Loading</li>
             <li>Sorting</li>
           </ul>
         </div>
       </div>
-      <div class="w-2/4 flex items-center justify-end pr-20">
+      <div class="hidden lg:visible w-2/4 lg:flex items-center justify-end pr-20">
         <h1 class="font-bebas text-[20vh] italic">Experience</h1>
       </div>
     </section>
-    <section id="contactme" class="h-full flex flex-col">
+
+    <section id="contactme" class="flex flex-col bg-even text-white">
       <div class="flex justify-center items-center">
-        <h1 class="text-5xl font-semibold">Contact Me!</h1>
+        <h1 class="text-5xl font-semibold mt-20 text-shadow-sm text-shadow-gray-300">Contact Me!</h1>
       </div>
-      <div class="flex h-full w-full justify-center items-center">
-        <div class="w-2/4 ">tes kiri</div>
-        <div class="w-2/4 ">tes kanan</div>
+      <div class="flex flex-col lg:flex-row justify-center items-center">
+        <div class="w-full lg:w-2/4 flex flex-col lg:flex-row justify-center items-center my-10 lg:my-50">
+          <h1 class="text-6xl font-bebas italic">Social Media</h1>
+          <div class="grid grid-cols-2 gap-5 mx-10 items-center">
+            <a href="https://instagram.com/fachrizala_" target="_blank"
+              ><img
+                src="assets/img/sosmed/instagram-logo.svg"
+                alt="instagram-logo"
+                class="rounded-xl aspect-square w-[100px] object-cover"
+            /></a>
+            <a href="https://discord.com/users/toinggg" target="_blank"
+              ><img
+                src="assets/img/sosmed/discord-logo.png"
+                alt="discord-logo"
+                class="bg-white rounded-xl aspect-square w-[100px] shadow-xl"
+            /></a>
+            <a href="https://linkedin.com/in/fachrizala" target="_blank"
+              ><img
+                src="assets/img/sosmed/linkedin-logo.png"
+                alt="linkedin-logo"
+                class="rounded-xl aspect-square w-[100px] shadow-xl"
+            /></a>
+            <a href="https://github.com/toingg" target="_blank"
+              ><img
+                src="assets/img/sosmed/github-logo.png"
+                alt="github-logo"
+                class="bg-white rounded-xl aspect-square w-[100px] shadow-xl"
+            /></a>
+          </div>
+        </div>
+        <div class="w-full lg:w-2/4 bg-white p-8 lg:rounded-xl shadow-lg mx-10">
+          <form action="https://formspree.io/f/xwpoyber" method="POST" class="flex flex-col gap-4">
+            <label class="flex flex-col text-gray-700 font-medium">
+              Your email:
+              <input
+                type="email"
+                placeholder="you@example.com"
+                class="mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+            </label>
+            <label class="flex flex-col text-gray-700 font-medium">
+              Your message:
+              <textarea
+                name="message"
+                placeholder="Write your message here..."
+                rows="4"
+                class="mt-1 p-3 border border-gra2y-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              ></textarea>
+            </label>
+            <button
+              type="submit"
+              class="mt-4 bg-gray-500 text-white py-3 rounded-lg font-semibold hover:bg-gray-600 transition"
+            >
+              Send
+            </button>
+          </form>
+        </div>
       </div>
+      <!-- <div class="flex justify-center items-center">
+        <p>Coded by toingg | Fachrizal Ardiansyah</p>
+      </div> -->
     </section>
-    <footer></footer>
+
+    <footer class="w-full bg-slate-900 text-white p-6 mt-10 flex flex-col items-center justify-center text-center">
+      <div id="quote" class="italic text-lg mb-2">Loading quote...</div>
+      <div id="author" class="font-semibold"></div>
+    </footer>
     <script src="main.js"></script>
   </body>
 </html>
